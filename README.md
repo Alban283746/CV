@@ -173,11 +173,11 @@ Pour un site $p_i$, sa cellule de Voronoï est :
 
 $$
 V_i=
-\left\{
-x\in\Omega\;|\;
+\{
+x\in\Omega\mid 
 \|x-p_i\|\leq\|x-p_j\|,
 \quad\forall j\neq i
-\right\}
+\}
 $$
 
 Autrement dit, chaque cellule contient les points dont le site générateur est le plus proche.
@@ -279,10 +279,10 @@ où :
 
 $$
 \nabla P=
-\left(
+(
 \frac{\partial P}{\partial x},
 \frac{\partial P}{\partial y}
-\right)
+)
 $$
 
 Le gradient est particulièrement important : il permet ensuite de construire des champs directionnels.
@@ -703,7 +703,7 @@ Le terme de base dépend de la valeur du champ côtier :
 
 $$
 B=
-\operatorname{normalize}
+\mathrm{normalize}
 (P,\;P_{\text{seuil}},\;P_{\text{seuil}}+0.75)
 $$
 
@@ -749,10 +749,10 @@ Le champ de profondeur est normalisé puis accentué :
 
 $$
 D_o=
-\left(
+(
 \frac{P_{\text{seuil}}-P}
 {P_{\text{seuil}}-P_{\min}}
-\right)^{0.72}
+)^{0.72}
 $$
 
 puis :
@@ -848,9 +848,9 @@ La latitude est :
 
 $$
 \varphi(y)=
-\left(
+(
 \frac12-\frac{y}{H}
-\right)\pi
+)\pi
 $$
 
 Donc :
@@ -881,11 +881,11 @@ Puis une formule de moyenne journalière est utilisée :
 $$
 Q=
 \frac{S_0}{\pi}
-\left[
+[
 H_0\sin\varphi\sin\delta
 +
 \cos\varphi\cos\delta\sin H_0
-\right]
+]
 $$
 
 où :
@@ -1092,11 +1092,11 @@ La convergence est alors :
 
 $$
 C=
-\operatorname{clamp}
-\left(
+\mathrm{clamp}
+(
 0.10+0.78E+0.42S-0.55D,
 0,1
-\right)
+)
 $$
 
 Cela crée :
@@ -1125,7 +1125,7 @@ On définit approximativement une composante orographique :
 
 $$
 O=
-\operatorname{clamp}(2.8R,0,1)
+\mathrm{clamp}(2.8R,0,1)
 $$
 
 où $R$ mesure la montée du terrain dans la direction du vent.
@@ -1831,7 +1831,6 @@ Ce projet combine plusieurs domaines de l'informatique scientifique :
 Le résultat est une chaîne de génération entièrement procédurale :
 
 $$
-\boxed{
 \text{Voronoï}
 \rightarrow
 \text{Perlin}
@@ -1843,7 +1842,6 @@ $$
 \text{Climat}
 \rightarrow
 \text{Biomes}
-}
 $$
 
 Le principal intérêt du projet réside dans le fait que chaque étape repose sur des données calculées par l'étape précédente : la géométrie définit le graphe, le bruit définit le relief, le relief influence le climat, et le climat détermine finalement les biomes.
