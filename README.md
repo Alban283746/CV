@@ -703,7 +703,7 @@ Le terme de base dépend de la valeur du champ côtier :
 
 $$
 B=
-\operatorname{normalize}
+\mathrm{normalize}
 (P,\;P_{\text{seuil}},\;P_{\text{seuil}}+0.75)
 $$
 
@@ -1092,7 +1092,7 @@ La convergence est alors :
 
 $$
 C=
-\operatorname{clamp}
+\mathrm{clamp}
 \left(
 0.10+0.78E+0.42S-0.55D,
 0,1
@@ -1125,7 +1125,7 @@ On définit approximativement une composante orographique :
 
 $$
 O=
-\operatorname{clamp}(2.8R,0,1)
+\mathrm{clamp}(2.8R,0,1)
 $$
 
 où $R$ mesure la montée du terrain dans la direction du vent.
@@ -1831,7 +1831,6 @@ Ce projet combine plusieurs domaines de l'informatique scientifique :
 Le résultat est une chaîne de génération entièrement procédurale :
 
 $$
-\boxed{
 \text{Voronoï}
 \rightarrow
 \text{Perlin}
@@ -1843,7 +1842,6 @@ $$
 \text{Climat}
 \rightarrow
 \text{Biomes}
-}
 $$
 
 Le principal intérêt du projet réside dans le fait que chaque étape repose sur des données calculées par l'étape précédente : la géométrie définit le graphe, le bruit définit le relief, le relief influence le climat, et le climat détermine finalement les biomes.
