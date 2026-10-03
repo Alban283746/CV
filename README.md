@@ -129,6 +129,10 @@ Création des cellules géométriques à partir des sites.
 
 ![Voronoï brut](images/voronoi.png)
 
+Zoom
+
+![Voronoï brut](images/Voronoi_zoom.png)
+
 ### Étape 2 — Altitude
 
 Le champ procédural est converti en relief.
